@@ -1,8 +1,6 @@
-// src/pages/Contact.tsx
-
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
-import emailjs from 'emailjs-com'; // Import Email.js
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,24 +13,21 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recipientEmail, setRecipientEmail] = useState<string | null>(null);
 
-  // Set the recipient email address (your email)
   useEffect(() => {
-    const email = 'surfaintsoln@gmail.com'; // Your email address
+    const email = import.meta.env.VITE_RECIPIENT_EMAIL;
     setRecipientEmail(email);
+    // Initialize Email.js with Public Key from environment variable
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
-
-  // Initialize Email.js with your Public Key
-  emailjs.init('IpURbaHykOFffOafS'); // Replace with your actual Public Key
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Check if recipientEmail is set
     if (!recipientEmail) {
       toast.error('Recipient email is not set. Please try again later.');
       setIsSubmitting(false);
-      return; // Halt the submission process
+      return;
     }
 
     const templateParams = {
@@ -41,17 +36,18 @@ const Contact = () => {
       phone: formData.phone,
       company: formData.company,
       message: formData.message,
-      to_email: recipientEmail, // Your email address
+      to_email: recipientEmail,
     };
 
     try {
-      // Send the form data using Email.js
-      await emailjs.send('service_vhf5zpm', 'Surfatech', templateParams);
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
 
-      // Show success message
       toast.success('Thank you for your inquiry! We will get back to you soon.');
 
-      // Reset form data
       setFormData({
         name: '',
         email: '',
@@ -60,12 +56,12 @@ const Contact = () => {
         message: '',
       });
 
-      // Refresh the page immediately
       setTimeout(() => {
         window.location.reload();
       }, 3000);
     } catch (error) {
-      // Optionally handle the error silently
+      toast.error('Failed to send message. Please try again later.');
+      console.error('Email sending error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -81,6 +77,7 @@ const Contact = () => {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name Field */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                 Name*
@@ -89,12 +86,13 @@ const Contact = () => {
                 type="text"
                 id="name"
                 required
-                className="input-field"
+                className="input-field w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
             </div>
 
+            {/* Email Field */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Email*
@@ -103,12 +101,13 @@ const Contact = () => {
                 type="email"
                 id="email"
                 required
-                className="input-field"
+                className="input-field w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
             </div>
 
+            {/* Phone Field */}
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                 Phone*
@@ -117,12 +116,13 @@ const Contact = () => {
                 type="tel"
                 id="phone"
                 required
-                className="input-field"
+                className="input-field w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               />
             </div>
 
+            {/* Company Field */}
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
                 Company
@@ -130,12 +130,13 @@ const Contact = () => {
               <input
                 type="text"
                 id="company"
-                className="input-field"
+                className="input-field w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               />
             </div>
 
+            {/* Message Field */}
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                 Message*
@@ -143,16 +144,17 @@ const Contact = () => {
               <textarea
                 id="message"
                 required
-                className="input-field min-h-[120px]"
+                className="input-field w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               ></textarea>
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="button-primary w-full"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300 disabled:bg-blue-400"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
