@@ -1,3 +1,4 @@
+// surfatech-web-solution/src/pages/About.tsx
 import { Check } from 'lucide-react';
 
 const About = () => {
@@ -8,16 +9,32 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="animate-fade-up">
-              <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
-              <p className="text-gray-600">
-                To be the leading provider of innovative powder coating solutions, setting industry standards for quality and customer satisfaction while promoting sustainable practices in surface finishing technology.
-              </p>
+              <div className="card bg-blue-50 border border-blue-200 shadow-md hover:shadow-lg transition-shadow duration-300"> {/* Card for Vision */}
+                <h2 className="text-3xl font-bold mb-6 text-blue-800">Our Vision</h2>
+                <p className="text-gray-700 mb-4">
+                  To be the leading provider of innovative powder coating solutions, setting industry standards for quality and customer satisfaction while promoting sustainable practices in surface finishing technology.
+                </p>
+                <ul className="list-disc list-inside text-gray-600">
+                  <li>Innovate continuously to meet evolving market demands.</li>
+                  <li>Enhance customer satisfaction through exceptional service.</li>
+                  <li>Commit to sustainable practices that protect the environment.</li>
+                  <li>Lead the industry in quality and reliability.</li>
+                </ul>
+              </div>
             </div>
             <div className="animate-fade-up">
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-              <p className="text-gray-600">
-                To deliver exceptional powder coating solutions through technical excellence, quality products, and outstanding customer service, helping our clients achieve superior finish results while maintaining environmental responsibility.
-              </p>
+              <div className="card bg-green-50 border border-green-200 shadow-md hover:shadow-lg transition-shadow duration-300"> {/* Card for Mission */}
+                <h2 className="text-3xl font-bold mb-6 text-green-800">Our Mission</h2>
+                <p className="text-gray-700 mb-4">
+                  To deliver exceptional powder coating solutions through technical excellence, quality products, and outstanding customer service, helping our clients achieve superior finish results while maintaining environmental responsibility.
+                </p>
+                <ul className="list-disc list-inside text-gray-600">
+                  <li>Provide tailored solutions that meet specific client needs.</li>
+                  <li>Ensure rigorous quality control and testing for all products.</li>
+                  <li>Offer expert consultation and ongoing support to clients.</li>
+                  <li>Foster a culture of innovation and continuous improvement.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -63,7 +80,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+            {[ 
               {
                 title: 'Industry Expertise',
                 description: '20+ years of experience in powder coating technology',

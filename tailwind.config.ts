@@ -1,3 +1,4 @@
+// surfatech-web-solution/tailwind.config.ts
 
 import type { Config } from "tailwindcss";
 
@@ -21,26 +22,38 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#1A1F2C",
+          DEFAULT: "#0056b3", // Professional blue
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#374151",
+          DEFAULT: "#6c757d", // Professional gray
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#E5E7EB",
+          DEFAULT: "#ffc107", // Professional yellow
           foreground: "#1A1F2C",
         },
         muted: {
-          DEFAULT: "#F3F4F6",
+          DEFAULT: "#f8f9fa", // Light gray for backgrounds
           foreground: "#374151",
+        },
+        success: {
+          DEFAULT: "#28a745", // Green for success messages
+          foreground: "#FFFFFF",
+        },
+        danger: {
+          DEFAULT: "#dc3545", // Red for error messages
+          foreground: "#FFFFFF",
+        },
+        warning: {
+          DEFAULT: "#ffc107", // Yellow for warnings
+          foreground: "#1A1F2C",
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0.5rem", // Consistent border radius
+        md: "0.375rem",
+        sm: "0.25rem",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
