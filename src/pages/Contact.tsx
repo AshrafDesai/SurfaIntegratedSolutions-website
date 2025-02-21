@@ -74,6 +74,20 @@ const Contact = () => {
   return (
     <div className="pt-20">
       <div className="container mx-auto px-4 py-16">
+        {/* Google Maps Location */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-center mb-4">Our Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.984756947091!2d73.13550117479711!3d19.239496081999068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7942d288e2feb%3A0x216072afd256c7e1!2sKalyan-Murbad%20Rd%2C%20Kalyan%2C%20Maharashtra%20421301!5e0!3m2!1sen!2sin!4v1740121009835!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
           <p className="text-center text-gray-600 mb-12">
