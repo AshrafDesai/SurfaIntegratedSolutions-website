@@ -1,5 +1,3 @@
-// src/pages/Contact.tsx
-
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
 import emailjs from 'emailjs-com'; // Import Email.js
@@ -15,24 +13,22 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recipientEmail, setRecipientEmail] = useState<string | null>(null);
 
-  // Set the recipient email address (your email)
   useEffect(() => {
     const email = 'surfaintsoln@gmail.com'; // Your email address
     setRecipientEmail(email);
+    
+    // Initialize Email.js when component mounts
+    emailjs.init('IpURbaHykOFffOafS'); // Replace with your actual Public Key
   }, []);
-
-  // Initialize Email.js with your Public Key
-  emailjs.init('IpURbaHykOFffOafS'); // Replace with your actual Public Key
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Check if recipientEmail is set
     if (!recipientEmail) {
       toast.error('Recipient email is not set. Please try again later.');
       setIsSubmitting(false);
-      return; // Halt the submission process
+      return;
     }
 
     const templateParams = {
@@ -41,17 +37,14 @@ const Contact = () => {
       phone: formData.phone,
       company: formData.company,
       message: formData.message,
-      to_email: recipientEmail, // Your email address
+      to_email: recipientEmail,
     };
 
     try {
-      // Send the form data using Email.js
       await emailjs.send('service_vhf5zpm', 'Surfatech', templateParams);
-
-      // Show success message
       toast.success('Thank you for your inquiry! We will get back to you soon.');
 
-      // Reset form data
+      // Reset form data without refreshing the page
       setFormData({
         name: '',
         email: '',
@@ -60,12 +53,9 @@ const Contact = () => {
         message: '',
       });
 
-      // Refresh the page immediately
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
     } catch (error) {
-      // Optionally handle the error silently
+      toast.error('Failed to send your message. Please try again later.');
+      console.error('EmailJS Error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -74,6 +64,7 @@ const Contact = () => {
   return (
     <div className="pt-20">
       <div className="container mx-auto px-4 py-16">
+        
         {/* Google Maps Location */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-center mb-4">Our Location</h2>

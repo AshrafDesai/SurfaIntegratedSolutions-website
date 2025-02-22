@@ -1,3 +1,4 @@
+// src/App.tsx
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -9,6 +10,7 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Footer from './components/Footer'; // Import the Footer component
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,7 @@ const App = () => (
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />
+      <Footer /> {/* Add the Footer component here */}
     </BrowserRouter>
   </QueryClientProvider>
 );
