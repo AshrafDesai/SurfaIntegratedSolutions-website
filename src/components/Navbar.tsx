@@ -21,7 +21,7 @@ const Navbar = () => {
           {/* Logo & Company Name - Aligned to Extreme Left */}
           <Link to="/" className="flex items-center space-x-3 pl-4"> {/* Added pl-4 for slight breathing space */}
             <img
-              src="https://surfatechintesoln.netlify.app/img/about1.png"
+              src="https://subtle-semifreddo-becae1.netlify.app/img/about1.png"
               alt="SurfaTech Logo"
               className="h-12 w-auto"
             />
