@@ -51,7 +51,7 @@ const About = () => {
                 {/* Owner Image */}
                 <div className="md:w-1/3">
                   <img 
-                    src="https://surfatechintesoln.netlify.app/img/owner.png" 
+                    src="https://subtle-semifreddo-becae1.netlify.app/img/owner.png" 
                     alt="Mr. M.N. Desai - Founder" 
                     className="w-full rounded-lg shadow-md"
                   />
