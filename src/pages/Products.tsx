@@ -1,4 +1,6 @@
-import { useState } from 'react';
+// src/pages/Products.tsx
+
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Select,
@@ -11,7 +13,7 @@ import {
 const Products = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [category, setCategory] = useState('powders'); // Default to powders
+  const [category, setCategory] = useState('powderCoatings'); // Default to powders
 
   const powderProducts = [
     {
@@ -52,6 +54,7 @@ const Products = () => {
     },
   ];
 
+
   const equipmentProducts = [
     {
       name: 'Industrial Ovens',
@@ -91,6 +94,28 @@ const Products = () => {
     },
   ];
 
+  
+  const liquidPaints = [
+    {
+      name: 'Acrylic Liquid Paint',
+      image: 'https://m.media-amazon.com/images/I/61QNa3zO5UL._SX679_.jpg', // Replace with actual image URL
+      description: 'Fast-drying acrylic paint suitable for various surfaces.',
+      features: ['Water-based', 'Low odor', 'Quick drying time'],
+    },
+    {
+      name: 'Oil-Based Liquid Paint',
+      image: 'data:image/jpeg;base64,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XFwKbflqoR+k+X2kgB4jIh6Z1Y+4ay4Vd0MIxuaImxhN28LTN1opfxF/nM8TblmIwpqsMTw3FClcmswZV107CnU+JIsBJYUEVVIVqoNtVIOlvW5gW8us6g1JSMpAKkWtYWt0tK7V3IwtyaYqUL62pVGVf3dR8Ji9HC3dkamWU+VWpOoPZoVCfyr82YT8x+IYFQygXNkphs1WoToAqjQed9O+0tK7l0u+tiW8DVsP4QJJ7M2Dh6BzU6YDd7m7Of8AubWWdOTxE3W3kPCy21yWt425Tl2CSjZrFnZdGp/8RTyIKCxB/ppOsyJ2ru3hcQb1qCO33rWb94axn0sM9cptZlZ4qjKtIH6up/p1z+lp94nFKoCZCmbReQZiRoqUx22PsllG4mEHdVt04tW3uvJTZmwMPhzelRVW+9zb946yY9HDHxJC5W+a1dv0T9BYZSxVEuo1Nly5tO+wBPslFw9ZGHo6a1VAHqlMwPepRrEaW+Pt6vIPaO6WFrHM1IBvvLdT8JrLCZeYm7FLpsn/ACKl/wDLv8b2mxVq3TLlKM5yojZQzE8rBSf9iWEbj4f79e3TitaSWy93cPhzmp0wH++bs37xknTk8Qttcw2ZVekBQqAUKlO6lagOV7aBkqaaad+uvKTNN3/5QPirqR8QJ0DG7NpVfrEDePf75F/+jsLe/DI8iRNcUV+jiMoLVAKQHezLr7v96y7bNYGlTI5FVI0I5joeU0cNu1hkIYUVJHe12+clgJZB+xEShERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQP/9k=', // Replace with actual image URL
+      description: 'Durable oil-based paint for long-lasting finishes.',
+      features: ['High durability', 'Glossy finish', 'Excellent adhesion'],
+    },
+    {
+      name: 'Watercolor Liquid Paint',
+      image: 'https://tiimg.tistatic.com/fp/1/007/704/excellent-quality-with-high-gloss-liquid-water-based-industrial-paint-530.jpg', // Replace with actual image URL
+      description: 'Vibrant watercolor paint for artistic applications.',
+      features: ['Transparent', 'Blendable', 'Non-toxic'],
+    },
+  ];
+
   const handleCategoryChange = (value) => {
     setCategory(value);
     navigate(`/products?category=${value}`);
@@ -109,12 +134,9 @@ const Products = () => {
           </div>
           <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
           <p className="text-gray-600 mb-4">{product.description}</p>
-          <ul className="space-y-2">
+          <ul className="space-y-1">
             {product.features.map((feature, featureIndex) => (
-              <li key={featureIndex} className="text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
-                {feature}
-              </li>
+              <li key={featureIndex} className="text-gray-600">{feature}</li>
             ))}
           </ul>
         </div>
@@ -132,22 +154,28 @@ const Products = () => {
               <SelectValue placeholder="Select a category" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="powders">Powder Coatings</SelectItem>
+              <SelectItem value="powderCoatings">Powder Coatings</SelectItem>
               <SelectItem value="equipment">Powder Coating Equipment</SelectItem>
+              <SelectItem value="liquidPaints">Liquid Paints</SelectItem> {/* Added Liquid Paints option */}
             </SelectContent>
           </Select>
         </div>
 
         <div className="animate-fade-up">
-          {category === 'powders' ? (
+          {category === 'powderCoatings' ? (
             <>
               <h2 className="text-2xl font-bold mb-8">Powder Coatings</h2>
               {renderProducts(powderProducts)}
             </>
-          ) : (
+          ) : category === 'equipment' ? (
             <>
               <h2 className="text-2xl font-bold mb-8">Powder Coating Equipment</h2>
               {renderProducts(equipmentProducts)}
+            </>
+          ) : (
+            <>
+              <h2 className="text-2xl font-bold mb-8">Liquid Paints</h2>
+              {renderProducts(liquidPaints)} {/* Render Liquid Paints */}
             </>
           )}
         </div>

@@ -10,7 +10,8 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Footer from './components/Footer'; // Import the Footer component
+import Brand from './pages/Brand'; // Import the Brand page
+import Footer from './components/Footer';
 
 const queryClient = new QueryClient();
 
@@ -23,11 +24,13 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/brand" element={<Brand />} />
         <Route path="/contact" element={<Contact />} />
+        {/* Add the route for Brand page */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />
-      <Footer /> {/* Add the Footer component here */}
+      <Footer />
     </BrowserRouter>
   </QueryClientProvider>
 );

@@ -1,3 +1,5 @@
+// src/components/Navbar.tsx
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -10,22 +12,22 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Products", path: "/products" },
+    { name: "Brands", path: "/brand" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-      <div className="container mx-auto px-0"> {/* Removed side padding */}
+      <div className="container mx-auto px-0">
         <div className="flex items-center justify-between h-20">
-
           {/* Logo & Company Name - Aligned to Extreme Left */}
-          <Link to="/" className="flex items-center space-x-3 pl-4"> {/* Added pl-4 for slight breathing space */}
+          <Link to="/" className="flex items-center space-x-3 pl-4">
             <img
-              src="https://surfatechintesoln.netlify.app/img/about1.png"
+              src="https://subtle-semifreddo-becae1.netlify.app/img/about1.png"
               alt="SurfaTech Logo"
               className="h-12 w-auto"
             />
-            <span className="text-xl font-semibold text-gray-800">
+            <span className="text-l font-semibold text-gray-800 pr-50"> {/* Added padding-right */}
               SurfaTech Integrated Solutions
             </span>
           </Link>
