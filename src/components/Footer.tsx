@@ -23,7 +23,7 @@ const Footer = () => {
                 <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className="h-8 w-8" /> {/* Increased size */}
               </a>
               {/* Gmail Icon */}
-              <a href="mailto:surfaintsoln@gmail.com" className="text-gray-300 hover:text-red-500">
+              <a href="mailto:enquiry@surfatechintegratedsolutions.com" className="text-gray-300 hover:text-red-500">
                 <img src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" alt="Gmail" className="h-8 w-8" /> {/* Increased size */}
               </a>
             </div>
