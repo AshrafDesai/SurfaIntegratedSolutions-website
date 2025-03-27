@@ -11,7 +11,7 @@ const Footer = () => {
             <h2 className="text-lg font-bold">SurfaTech Integrated Solutions</h2>
             <p className="text-sm">Kalyan-Murbad Rd, Kalyan, Maharashtra 421301</p>
             <p className="text-sm">
-              Email: <a href="mailto:enquiry@surfatechintegratedsolutions.com" className="text-blue-400 hover:underline">enquiry@surfatechintegratedsolutions.com</a>
+              Email: <a href="mailto:sales@surfatechintegratedsolutions.com" className="text-blue-400 hover:underline">enquiry@surfatechintegratedsolutions.com</a>
             </p>
             <p className="text-sm">Phone: <span className="text-blue-400">+91 8928292594</span></p>
           </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="LinkedIn" className="h-8 w-8" /> {/* Increased size */}
               </a>
               {/* Gmail Icon */}
-              <a href="mailto:enquiry@surfatechintegratedsolutions.com" className="text-gray-300 hover:text-red-500">
+              <a href="mailto:sales@surfatechintegratedsolutions.com" className="text-gray-300 hover:text-red-500">
                 <img src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" alt="Gmail" className="h-8 w-8" /> {/* Increased size */}
               </a>
             </div>
