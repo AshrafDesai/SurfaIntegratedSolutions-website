@@ -11,7 +11,7 @@ const Footer = () => {
             <h2 className="text-lg font-bold">SurfaTech Integrated Solutions</h2>
             <p className="text-sm">Kalyan-Murbad Rd, Kalyan, Maharashtra 421301</p>
             <p className="text-sm">
-              Email: <a href="mailto:surfaintsoln@gmail.com" className="text-blue-400 hover:underline">surfaintsoln@gmail.com</a>
+              Email: <a href="mailto:enquiry@surfatechintegratedsolutions.com" className="text-blue-400 hover:underline">enquiry@surfatechintegratedsolutions.com</a>
             </p>
             <p className="text-sm">Phone: <span className="text-blue-400">+91 8928292594</span></p>
           </div>
