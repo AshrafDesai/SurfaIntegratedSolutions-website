@@ -25,7 +25,7 @@ const brands = [
     id: 4,
     name: 'Atharva Aerosol',
     description: 'High-quality liquid paints and aerosol solutions for versatile applications',
-    imageUrl: 'https://files.oaiusercontent.com/file-Mo6Qz5vuA7FtkFQtvtaiHK?se=2025-03-25T05%3A07%3A36Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df3d464bc-a509-41e9-ad65-44383e07a805.webp&sig=4KtaglmrGl/c3fEF63JS2rCqZ9Q3TYKNxJMPgb4vQ9k%3D', // Replace with actual image URL
+    imageUrl: 'https://media-hosting.imagekit.io/e56f7a5d46e64359/atharva_aerosol.png?Expires=1837833218&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Nf1199FWeGLFeviQglL7J3s8Mn19Uh~us7o20Emb85DI25lfh1JhEKznphwGHDVwqlUhXfVTV9lrp7JF5s-lShwJaEoLcw8ELEttnqgrj-3RrKgZXLScSM79jmAp55DomNFkBU0Zdr1ns7xjet4mlvyCxLzIdfpkg4yCzo1wKnNx-LAV8E~XJllhWO2C1l8FsE6cFecpigh0zqXpZRvEGKMCpElpHQln5ppu-xgfFmXlNfLYUPXH2Kx8CiNlrQc52VULcGJnLRwrCEKBtFv4~1OHiWIsXjipxeZX7Py4-0~PiZmtKq2XgGdHdCO4Xa31AE36kB3GeOI79KcjwImDIQ__', // Replace with actual image URL
   },
   {
     id: 4,
