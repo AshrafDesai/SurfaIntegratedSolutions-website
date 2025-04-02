@@ -13,7 +13,7 @@ const Footer = () => {
             <p className="text-sm">
               Email: <a href="mailto:sales@surfatechintegratedsolutions.com" className="text-blue-400 hover:underline">sales@surfatechintegratedsolutions.com</a>
             </p>
-            <p className="text-sm">Phone: <span className="text-blue-400">+91 8928292594</span></p>
+            <p className="text-sm">Phone: <span className="text-blue-400">+91 9326446142</span></p>
           </div>
           <div>
             <h3 className="text-md font-semibold">Follow Us</h3>
