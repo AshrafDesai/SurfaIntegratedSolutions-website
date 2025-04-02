@@ -25,7 +25,7 @@ const Navbar = () => {
             <img
               src="https://subtle-semifreddo-becae1.netlify.app/img/about1.png"
               alt="SurfaTech Logo"
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
             <span className="text-l font-semibold text-gray-800 pr-50"> {/* Added padding-right */}
               SurfaTech Integrated Solutions
