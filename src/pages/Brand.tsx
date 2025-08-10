@@ -1,4 +1,4 @@
-// src/pages/Brand.tsx
+                                                                                                                                                                  // src/pages/Brand.tsx
 
 import React from 'react';
 
@@ -43,17 +43,26 @@ const brands = [
 
 const Brand = () => {
   return (
-    <div className="container mx-auto p-4 pt-8">
-      <h1 className="text-3xl font-bold mb-6">Brands</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {brands.map((brand) => (
-          <div key={brand.id} className="bg-white shadow-md rounded-lg p-4 transition-transform transform hover:scale-105">
-            <img src={brand.imageUrl} alt={brand.name} className="w-full h-32 object-contain rounded-md mb-4" /> {/* Changed to object-contain */}
-            <h2 className="text-xl font-semibold">{brand.name}</h2>
-            <p className="text-gray-600">{brand.description}</p>
-          </div>
-        ))}
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow container mx-auto p-4 pt-8">
+        <h1 className="text-3xl font-bold mb-6">Brands</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-20">
+          {brands.map((brand) => (
+            <div
+              key={brand.id}
+              className="bg-white shadow-md rounded-lg p-4 transition-transform transform hover:scale-105"
+            >
+              <img
+                src={brand.imageUrl}
+                alt={brand.name}
+                className="w-full h-32 object-contain rounded-md mb-4"
+              />
+              <h2 className="text-xl font-semibold">{brand.name}</h2>
+              <p className="text-gray-600">{brand.description}</p>
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 };
