@@ -3,7 +3,7 @@
     {
       "source": "/(.*)",
       "has": [
-        { "type": "host", "value": "www.surfatechintegratedsolutions.in" }
+        { "type": "host", "value": "surfatechintegratedsolutions.com" }
       ],
       "destination": "https://surfatechintegratedsolutions.in/$1",
       "permanent": true
