@@ -3,30 +3,10 @@
     {
       "source": "/(.*)",
       "has": [
-        {
-          "type": "host",
-          "value": "surfatechintegratedsolutions.com"
-        }
+        { "type": "host", "value": "www.surfatechintegratedsolutions.in" }
       ],
       "destination": "https://surfatechintegratedsolutions.in/$1",
       "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.surfatechintegratedsolutions.com"
-        }
-      ],
-      "destination": "https://surfatechintegratedsolutions.in/$1",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
