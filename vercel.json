@@ -10,10 +10,23 @@
       ],
       "destination": "https://surfatechintegratedsolutions.in/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.surfatechintegratedsolutions.com"
+        }
+      ],
+      "destination": "https://surfatechintegratedsolutions.in/$1",
+      "permanent": true
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
